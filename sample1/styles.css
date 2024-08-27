@@ -3,44 +3,67 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #002f6c;
+    background: url('https://media.gettyimages.com/id/1162040662/vector/vector-superhero-silhouette-with-sunburst-effect-background.jpg?s=612x612&w=0&k=20&c=NyvKS97BiIyoZ4Z75Sd7Iptc9BTckQQNep91MGhuRmo=') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 150px 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Slightly lighter for better text readability */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out;
 }
 
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out;
 }
 
 .cta-button {
-    background-color: #ff6f61;
+    background-color: #0056b3; /* Darker blue for the button */
     color: white;
-    padding: 10px 20px;
+    padding: 12px 30px;
     text-decoration: none;
     font-size: 1.2rem;
-    border-radius: 5px;
+    border-radius: 30px;
+    transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #ff3b2f;
+    background-color: #e5e5e6; /* Even darker blue on hover */
 }
 
 /* Sections */
-section {
-    padding: 50px 20px;
-    background-color: #f4f4f4;
+.section {
+    padding: 60px 20px;
+    background-color: #f4f4f4; /* Light gray for contrast */
+}
+
+.section:nth-of-type(even) {
+    background-color: #ffffff; /* White for alternating sections */
 }
 
 .container {
@@ -51,31 +74,59 @@ section {
 
 h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    color: #002f6c; /* Dark blue for headings */
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 20px;
+    color: #333; /* Dark gray for text */
 }
 
 .about-content, .programs-content {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 
-.about-content div, .programs-content div {
+.card {
     flex: 1 1 300px;
-    margin: 10px;
-    padding: 20px;
-    background-color: white;
+    margin: 15px;
+    padding: 25px;
+    background-color: #ffffff; /* White for card background */
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+ul {
+    text-align: left;
+}
+
+ul li {
+    list-style: none;
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+ul li::before {
+    content: '•';
+    color: #0056b3; /* Dark blue for bullet points */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
 
 /* Footer */
 footer {
-    background-color: #002f6c;
+    background-color: hsl(0, 0%, 100%); /* Dark blue for footer */
     color: white;
     text-align: center;
     padding: 20px;

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Empowering Future Engineers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {height: 100%; line-height: 1.8;}
+.bgimg-1 {background-position: center; background-size: cover; background-image: url("/w3images/hero-bg.jpg"); min-height: 100%;}
+.w3-bar .w3-button {padding: 16px;}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT US</a>
+      <a href="#programs" class="w3-bar-item w3-button"><i class="fa fa-book"></i> PROGRAMS</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT US</a>
+  <a href="#programs" onclick="w3_close()" class="w3-bar-item w3-button">PROGRAMS</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Hero Section -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Empowering Future Engineers for Successful Careers</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Empowering Future Engineers for Successful Careers</span><br>
+    <span class="w3-large">Training the next generation of tech talent for on-campus and off-campus placements.</span>
+    <p><a href="#contact" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Get Started</a></p>
+  </div> 
+</header>
+
+<!-- Introduction Section -->
+<div class="w3-container" style="padding:64px 16px" id="intro">
+  <h3 class="w3-center">Our Vision and Mission</h3>
+  <p class="w3-center w3-large">To make students job-ready and train engineering candidates to be ready for on-campus and off-campus placements.</p>
+  <p class="w3-center"><a href="#about" class="w3-button w3-black w3-padding-large">Learn More</a></p>
+</div>
+
+<!-- About Us Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">ABOUT US</h3>
+  <p class="w3-center w3-large">Our Mission and Vision</p>
+  <p>We bridge the skills gap by preparing final-year engineering students for successful placements through both technical and soft skills training. We cater specifically to students in their 7th and 8th semesters from CS, ECE, and IT branches.</p>
+  <p><b>Why We Exist:</b> This initiative addresses the skills gap in both technical and soft skills required for placement success.</p>
+  <p><b>How We Operate:</b> We provide a comprehensive training process through on-campus and virtual sessions to ensure all-round preparation.</p>
+</div>
+
+<!-- Programs and Services Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="programs">
+  <h3 class="w3-center">PROGRAMS AND SERVICES</h3>
+  <p class="w3-center w3-large">Enhance your skills with our targeted programs</p>
+  
+  <!-- Soft Skills Training -->
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l6">
+      <h4>Soft Skills Training</h4>
+      <ul>
+        <li><b>Interview Preparation:</b> Tips on dress code, appearance, and behavior.</li>
+        <li><b>Resume Building:</b> Guidance on crafting a professional resume tailored to job profiles.</li>
+        <li><b>LinkedIn Profile Optimization:</b> Tips for creating a compelling LinkedIn profile.</li>
+        <li><b>Written Test Preparation:</b> Training in quantitative aptitude, reasoning, and verbal skills.</li>
+        <li><b>Group Discussion (GD) Preparation:</b> Techniques and practice for group discussions.</li>
+        <li><b>Confidence Building:</b> Activities and workshops to boost self-confidence.</li>
+      </ul>
+    </div>
+    
+    <!-- Technical Skills Training -->
+    <div class="w3-col l6">
+      <h4>Technical Skills Training</h4>
+      <ul>
+        <li><b>Project Knowledge:</b> In-depth understanding of academic and personal projects.</li>
+        <li><b>Favorite Subject Expertise:</b> Building expertise in selected subjects of interest.</li>
+        <li><b>Job Profile Awareness:</b> Educating on different job roles and their requirements.</li>
+        <li><b>Mock Interviews:</b> Conducting simulated interviews for practice and improvement.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Career Counseling -->
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col s12">
+      <h4>Career Counseling</h4>
+      <p>Personalized guidance based on market trends and individual assessments to help you navigate your career path.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT US</h3>
+  <p class="w3-center w3-large">Let’s get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Your City, Country</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i> Email: mail@mail.com</p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  </div>
+</div>
+
+<!-- Footer
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity -->
+
+<!-- Footer -->
+<footer class="w3-center w3-dark-grey w3-padding-16">
+  <p>&copy; 2024 My Company. All rights reserved.</p>
+</footer>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+function onClick(element) {
+  var img = document.createElement('img');
+  img.src = element.src;
+  img.classList.add('w3-image');
+  var modal = document.createElement('div');
+  modal.classList.add('w3-modal');
+  modal.classList.add('w3-animate-opacity');
+  modal.innerHTML = '<div class="w3-modal-content w3-animate-zoom"><span class="w3-button w3-display-topright" onclick="this.parentElement.parentElement.style.display=\'none\'">&times;</span>' + img.outerHTML + '</div>';
+  document.body.appendChild(modal);
+  modal.style.display = 'block';
+}
+</script>
+
+</body>
+</html>
