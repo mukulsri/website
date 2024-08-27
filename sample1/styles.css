@@ -1,210 +1,277 @@
-/* General Reset */
-* {
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6; /* Light background color */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.main-header {
+    background-color: #022c43; /* Dark blue background */
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav ul li {
+    display: inline;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    background-color: #026873; /* Teal hover background */
+    border-radius: 5px;
 }
 
 /* Hero Section */
 .hero {
-    background: url('https://media.gettyimages.com/id/1162040662/vector/vector-superhero-silhouette-with-sunburst-effect-background.jpg?s=612x612&w=0&k=20&c=NyvKS97BiIyoZ4Z75Sd7Iptc9BTckQQNep91MGhuRmo=') no-repeat center center/cover;
+    background-color: #022c43; /* Dark blue background */
     color: white;
     text-align: center;
-    padding: 150px 20px;
-    position: relative;
+    padding: 100px 20px;
+    margin-top: 60px; /* Adjusted for fixed header */
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-}
-
-.hero h1 {
-    font-size: 3rem;
+.hero-content h1 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
-    animation: fadeInDown 1s ease-out;
 }
 
-.hero p {
-    font-size: 1.5rem;
+.hero-content p {
+    font-size: 1.25rem;
     margin-bottom: 30px;
-    animation: fadeInUp 1s ease-out;
 }
 
 .cta-button {
-    background-color: #0056b3;
+    background-color: #f26a4b; /* Orange button color */
     color: white;
     padding: 12px 30px;
-    text-decoration: none;
-    font-size: 1.2rem;
+    border: none;
     border-radius: 30px;
-    transition: background-color 0.3s;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #003d7a;
+    background-color: #e63946; /* Darker orange hover */
+    transform: scale(1.05);
 }
 
-/* Sections */
-.section {
-    padding: 60px 20px;
-    background-color: #f4f4f4;
-}
-
-.section:nth-of-type(even) {
-    background-color: #ffffff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #002f6c;
-}
-
-p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.about-content, .programs-content {
+/* About Us Section */
+.about-content {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
     margin-top: 30px;
+    flex-wrap: wrap;
 }
 
 .card {
-    flex: 1 1 300px;
-    margin: 15px;
-    padding: 25px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-ul {
-    text-align: left;
-    list-style: none;
-}
-
-ul li {
-    margin: 10px 0;
-    padding-left: 20px;
-    position: relative;
-}
-
-ul li::before {
-    content: '•';
-    color: #0056b3;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-/* Footer */
-footer {
-    background-color: #002f6c;
-    color: white;
-    text-align: center;
+    background-color: white;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+    border-top: 4px solid #026873; /* Teal accent */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for hover effect */
 }
 
-footer p {
-    margin: 10px 0;
+.card h3 {
+    color: #022c43; /* Dark blue for card titles */
 }
 
-footer a {
-    color: #e5e5e6;
-    text-decoration: none;
+/* Hover effect for cards */
+.card:hover {
+    transform: translateY(-10px); /* Pops up the card */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow for popping effect */
 }
 
-footer a:hover {
-    text-decoration: underline;
+/* Programs Section */
+.programs-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
 }
 
-/* Forms */
-form {
+.programs-content .card ul {
+    color: #333;
+}
+
+.programs-content .card p {
+    color: #333;
+}
+
+/* Contact Us Section */
+#contact-us .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
-form label {
+.contact-details-form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.contact-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-item h3 {
+    font-size: 1.5rem;
+    color: #022c43; /* Dark blue for contact titles */
+}
+
+.contact-item p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-item a {
+    color: #f26a4b; /* Orange links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #e63946; /* Darker orange hover */
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.contact-form label {
     margin-top: 10px;
     font-weight: bold;
+    color: #022c43; /* Dark blue for labels */
+    text-align: left;
 }
 
-form input, form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     max-width: 600px;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-form button {
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #026873; /* Teal focus */
+    box-shadow: 0 0 5px rgba(2, 104, 115, 0.5); /* Teal shadow */
+}
+
+.contact-form button {
     margin-top: 20px;
-    background-color: #0056b3;
+    background-color: #f26a4b; /* Orange button */
     color: white;
     padding: 12px 30px;
     border: none;
     border-radius: 30px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-form button:hover {
-    background-color: #003d7a;
+.contact-form button:hover {
+    background-color: #e63946; /* Darker orange hover */
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #022c43; /* Dark blue background */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #f26a4b; /* Orange links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e63946; /* Darker orange hover */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero {
-        padding: 100px 10px;
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
+    .contact-details-form-wrapper {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    .section {
-        padding: 40px 10px;
-    }
-
-    .card {
-        flex: 1 1 100%;
-    }
-
-    form input, form textarea {
-        width: 100%;
+    .contact-item,
+    .contact-form {
+        text-align: center;
+        align-items: center;
     }
 }
